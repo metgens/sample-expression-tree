@@ -45,6 +45,8 @@ namespace ExpressionTreeSample.ConsoleApp
             Console.WriteLine("Operation succeeded. First 10 results:");
             Console.WriteLine("#########################################");
             result.Take(10).ToList().ForEach(x => Console.WriteLine(x.ToString()));
+            Console.WriteLine("#########################################");
+            Console.WriteLine(ExpressionTreeHelper.SerializeAnyMathOperation<InputData>(inputOperation));
         }
     }
 }

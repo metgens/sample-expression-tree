@@ -1,0 +1,3 @@
+[submodule "src/ExpressionTreeSample/Submodules/expression-json-serializer"]
+	path = src/ExpressionTreeSample/Submodules/expression-json-serializer
+	url = https://github.com/aquilae/expression-json-serializer.git

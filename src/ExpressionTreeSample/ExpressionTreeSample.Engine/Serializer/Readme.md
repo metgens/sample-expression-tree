@@ -1,0 +1,1 @@
+Copied from: https://github.com/aquilae/expression-json-serializer

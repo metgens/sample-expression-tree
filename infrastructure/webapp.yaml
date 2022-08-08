@@ -4,6 +4,7 @@ metadata:
   name: expression-tree-webapp-deployment
   labels:
     app: expression-tree-webapp
+    isApi: "true"
 spec:
   replicas: 1
   selector:

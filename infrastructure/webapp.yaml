@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expression-tree-webapp-deployment
+  labels:
+    app: expression-tree-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expression-tree-webapp
+  template:
+    metadata:
+      labels:
+        app: expression-tree-webapp
+    spec:
+      containers:
+        - name: expression-tree-webapp
+          image: metgens/expressiontreesample:latest
+          ports:
+            - containerPort: 5293
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: expression-tree-webapp-service
+spec:
+  type: NodePort
+  selector:
+    app: expression-tree-webapp
+  ports:
+    - protocol: TCP
+      port: 5293
+      targetPort: 5293
+      nodePort: 30000
